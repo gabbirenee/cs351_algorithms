@@ -1,4 +1,10 @@
 /*
+    Gabbi Forsythe
+    10/25/2019
+    CS351-01
+    Dr. Chen
+
+    
     PROJECT 1: FLOYD'S SHORTEST PATH ALGORITHM
     This program will read in data from a text file and use Floyd's algorithm to compute the
     shortest path matrix, for every vertex in the directed graph
