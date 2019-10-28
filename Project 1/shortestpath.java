@@ -116,6 +116,7 @@ class shortestpath {
             System.out.println();
         } catch (Exception ex) {
             System.out.println("Invalid data in text file.");
+            return; 
         }
 
         System.out.println();
@@ -163,3 +164,77 @@ class shortestpath {
     }
 
 }
+
+/* SAMPLE OUPUT:
+
+thomas% java shortestpath
+
+Matrix of existing paths to/from each vertex from text file: 
+
+
+0 4 100000 100000 100000 10 100000 
+3 0 100000 18 100000 100000 100000 
+100000 6 0 100000 100000 100000 100000 
+100000 5 15 0 2 19 5 
+100000 100000 12 1 0 100000 100000 
+100000 100000 100000 100000 100000 0 10 
+100000 100000 100000 8 100000 100000 0 
+
+
+Matrix of the shortest path to and from each vertex: 
+
+
+0 4 36 22 24 10 20 
+3 0 32 18 20 13 23 
+9 6 0 24 26 19 29 
+8 5 14 0 2 18 5 
+9 6 12 1 0 19 6 
+26 23 32 18 20 0 10 
+16 13 22 8 10 26 0 
+
+
+
+Now we will calculate the path between two vertices. Enter in start vertex: 
+3
+Enter in end vertex: 
+5
+v3 -> v2 -> v4 -> v5
+Program end.
+thomas% 
+
+*/
+
+/* SAMPLE OUTPUT 2 (DIFFERENT TEXT FILE - from pg. 101 in book):
+
+thomas% java shortestpath
+
+Matrix of existing paths to/from each vertex from text file: 
+
+
+0 1 100000 1 5 
+9 0 3 2 100000 
+100000 100000 0 4 100000 
+100000 100000 2 0 3 
+3 100000 100000 100000 0 
+
+
+Matrix of the shortest path to and from each vertex: 
+
+
+0 1 3 1 4 
+8 0 3 2 5 
+10 11 0 4 7 
+6 7 2 0 3 
+3 4 6 4 0 
+
+
+
+Now we will calculate the path between two vertices. Enter in start vertex: 
+4
+Enter in end vertex: 
+2
+v4 -> v5 -> v1 -> v2
+Program end.
+thomas%
+
+*/
