@@ -6,7 +6,7 @@
 
     
     PROJECT 2: Part 2 - Knapsack with Fractions: (Greedy Algorithm)
-    Use the greedy algorithm to solve the 0/1 Knapsack Problem
+    Use the greedy algorithm to solve the Knapsack with Fractions Problem
 */
 
 import java.io.*;
