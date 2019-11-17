@@ -74,7 +74,7 @@ class kwf {
 
         int numItems, capacity, weight, profit;
         Items [] list;  // the items that are read in from the text file
-        boolean [] ks;  // if the item in that position is put in the knapsack, it will recieve a true value, else = false
+        boolean [] ks;  // if the item in that position is put in the knapsack, it will receive a true value, else = false
         Items temp;     
 
         try {
