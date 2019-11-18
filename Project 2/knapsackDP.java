@@ -24,7 +24,7 @@ class knapsackDP {
 
     public static int totalProfit (int cap, int n, int [] wt, int [] ben) {
         int i, j;
-        int P[][] = new int[n+1][cap+1];
+        int P[][] = new int[n+1][cap+1];    // table that the profit for each "row" will be stored in
 
         for(i=0; i<=n; i++) {
             for(j=0; j<=cap; j++) {
@@ -40,7 +40,7 @@ class knapsackDP {
             }
         }
 
-        return P[n][cap];
+        return P[n][cap];   // return the Profit of the most number of items with the full capacity of the knapsack
     }
 
     public static void main (String [] args)
@@ -88,3 +88,22 @@ class knapsackDP {
         txtfile.close();
     }
 }
+
+
+/* 
+Knapsack.txt:
+30
+3
+5 50
+10 60
+20 140
+
+TEST RUN: 
+thomas% java knapsackDP
+List of Items: 
+    ID: 0  Weight: 5  Profit: 50
+    ID: 1  Weight: 10  Profit: 60
+    ID: 2  Weight: 20  Profit: 140
+Total Profit: $200
+thomas% 
+*/
