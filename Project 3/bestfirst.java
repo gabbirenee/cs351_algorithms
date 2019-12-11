@@ -161,7 +161,7 @@ class bestfirst {
             System.out.println("List of Items: ");
             //Print the items in the array after they are read in from the text file
             for(int i = 0; i < numItems; i++) {
-                System.out.println("    ID: "+(i+1)+"  Weight: "+w[i]+"  Profit: "+p[i]);
+                System.out.println("    ID: "+i+"  Weight: "+w[i]+"  Profit: "+p[i]);
             }
 
             System.out.println();
