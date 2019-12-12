@@ -17,7 +17,8 @@ using namespace std;
 // global variables because that is what the book said to do on page 243
 int n, W, numbest, maxprofit; 
 
-bool promising (int i, int weight, int profit, int w [], int p []) {
+// tells if the node is promising or not
+bool promising (int i, int weight, int profit, int w [], int p []) { 
     int j, k, totalweight;
     float bound;
 
@@ -38,7 +39,7 @@ bool promising (int i, int weight, int profit, int w [], int p []) {
             bound = bound + (W - totalweight) * (p[k]/w[k]);
         }
         // cout << "Bound = " << bound; 
-        return bound > maxprofit;
+        return bound > maxprofit;       // if the bound is greater than the maximum profit, the node is promising
     }
 }
 
@@ -51,7 +52,7 @@ void knapsack (int i, int profit, int weight, int* w, int* p, bool* include, boo
 
     bool promise = promising(i, weight, profit, w, p); 
 
-    if(promise == true ) {
+    if(promise == true ) {      // if the node is promising
         include[i+1] = true;        // include the node
         knapsack (i + 1, profit + p[i+1], weight + w[i+1], w , p, include, bestset);
         include[i+1] = false;        // don't include the node
@@ -95,7 +96,8 @@ int main() {
     numbest = 0;
     maxprofit = 0; 
     knapsack(0, 0, 0, w, p, include, bestset);
-    // TODO: Print maxprofit and best set in the actual algorithm
+
+    
     cout << "Max Profit: $" << maxprofit << endl; 
     cout << "Items included: "<< endl;
     for (int j = 1; j <= numbest; j++) {
@@ -144,7 +146,7 @@ int main() {
             ID: 2  Weight: 5  Profit: 30
             ID: 3  Weight: 10  Profit: 50
             ID: 4  Weight: 5  Profit: 10
-        Max Profit: $90
+        Max Profit: $80
         Items included: 
             1
             3
